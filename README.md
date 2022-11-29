@@ -1,4 +1,4 @@
-# Note-Taker-Challenge-11
+# Note Taker
 
 ## Description
 This is the eleventh challenge in the Northwestern Coding Bootcamp (Module 11). In this simple note-taker application, we were given all of the front end code and were expected to correctly route all user requests and server responses using the Express npm through node.js. We used the GET, POST, and DELETE methods to allow users to input notes and have them saved on the backend, displayed on the front end, as well as deleted from the database. Personally, I used Insomnia to test the backend functionality before testing the functionality from the front end.

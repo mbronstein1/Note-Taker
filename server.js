@@ -36,8 +36,6 @@ app.get('/api/notes', (req, res) => {
 
 // POST Route for notes api data
 app.post('/api/notes', (req, res) => {
-  // console.info(req.body);
-  // res.json(req.body);
   const {title, text} = req.body
   if(title && text){
     const newNote = {
@@ -62,16 +60,10 @@ app.post('/api/notes', (req, res) => {
 // DELETE route for notes api data w/ specific id
 app.delete('/api/notes/:id', (req, res) => {
   const {id} = req.params;
-  // console.log(id)
-  // res.json(id)
   readFromFile('./db/db.json').then((data)=> {
     const parsedData = JSON.parse(data)
     const noteIndex = parsedData.findIndex(note => note.id === id);
-    // console.log(parsedData)
-    // console.log(noteIndex)
-    // res.json(parsedData);
     parsedData.splice(noteIndex, 1);
-    // console.log(parsedData)
     writeToFile('./db/db.json', parsedData);
     return res.json(parsedData);
   })
